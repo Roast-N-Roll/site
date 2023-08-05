@@ -1,0 +1,41 @@
+<section class="section" id="menu">
+  <div class="container">
+    <div class="row section-heading justify-content-center">
+      <div class="col-lg-8 text-center">
+        <p class="text-primary title-01 m-0">DISCOVER</p>
+        <h3 class="h1 pt-1">SELECTED MENU</h3>
+      </div>
+    </div>
+    <div class="row gx-md-10">
+      <div class="col-md-6">
+        <ul class="list-unstyled">
+          {% for item in site.data.menu.column_left %}
+            <a class="btn btn-light-soft fs-xs p-0 icon-xs rounded-circle me-2" href="{{ item.link }}"><i class="bi-{{ item.name }}"></i> </a>
+            <li class="pb-4">
+              <div class="d-flex align-items-baseline pb-2">
+                <h6 class="m-0 pe-4 h5 text-primary">{{ item.name }}</h6><span
+                  class="border-bottom flex-grow-1"></span> <span class="ps-4 h5 m-0">{{ item.price }}</span>
+              </div>
+              <p class="m-0">{{ item.description }}</p>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="col-md-6">
+        <ul class="list-unstyled">
+          {% for item in site.data.menu.column_right %}
+            <a class="btn btn-light-soft fs-xs p-0 icon-xs rounded-circle me-2" href="{{ item.link }}"><i class="bi-{{ item.name }}"></i> </a>
+            <li class="pb-4">
+              <div class="d-flex align-items-baseline pb-2">
+                <h6 class="m-0 pe-4 h5 text-primary">{{ item.name }}</h6><span
+                  class="border-bottom flex-grow-1"></span> <span class="ps-4 h5 m-0">{{ item.price }}</span>
+              </div>
+              <p class="m-0">{{ item.description }}</p>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

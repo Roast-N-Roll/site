@@ -1,0 +1,78 @@
+<section class="section bg-gray-100" id="contact_us">
+  <div class="container">
+    <div class="row gy-5">
+      <div class="col-lg-6">
+        <div class="card">
+          <div class="card-body p-lg-4">
+            <h3 class="h3 mb-3">You Can Mail Us</h3>
+            <form class="rd-mailform pt-3" data-form-output="form-output-global" data-form-type="contact" method="post" action="../../assets/vendor/mail/bat/rd-mailform.php">
+              <div class="row gy-4">
+                <div class="col-sm-6">
+                  <div class="form-floating">
+                    <input id="contact-name" type="text" name="name" placeholder="Rachel Roth" data-constraints="@Required" class="form-control">
+                    <label class="form-label" for="contact-name">Your Name</label>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-floating">
+                    <input id="contact-email" type="email" name="email" placeholder="name@example.com" data-constraints="@Required" class="form-control">
+                    <label class="form-label" for="contact-email">Email Address</label>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="form-floating">
+                    <input id="contact-subject" type="text" name="subject" placeholder="Subject" data-constraints="@Required" class="form-control">
+                    <label class="form-label" for="contact-email">Subject</label>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-floating">
+                    <input type="text" name="contact-company" class="form-control" placeholder="pxdraft" id="contact-company">
+                    <label class="form-label" for="contact-company">Company (optional)</label>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-floating">
+                    <input type="tel" name="contact-phone" class="form-control" placeholder="+01 888 888 6666" id="contact-phone">
+                    <label class="form-label" for="contact-phone">Phone (optional)</label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-floating">
+                    <textarea class="form-control" id="contact-message" name="message" rows="3" placeholder="Hi there, I would like to ..." data-constraints="@Required" style="height: 150px"></textarea> 
+                    <label class="form-label" for="contact-message">Message</label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-primary" type="submit" name="send">Submit</button>
+                  <div class="snackbars" id="form-output-global"></div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 ps-xl-12 pl-lg-6">
+        <h3 class="h2 mb-2">Get in Touch</h3>
+        <p class="fs-lg">Let's Brew Some Magic Together!</p>
+        <ul class="list-unstyled mb-0 pt-3 border-bottom pb-2 mb-2">
+          <li class="pb-3 d-flex">
+            <div class="icon-sm bg-primary text-white rounded-circle"><i class="bi bi-envelope fs-5"></i>
+            </div>
+            <div class="ps-3 col">
+              <div class="mb-1 text-dark fw-600">Email</div><span>{{ site.email }}</span>
+            </div>
+          </li>
+        </ul>
+        <h3 class="h5 mb-2">Address</h3>
+        <p>{{ site.address }}</p>
+        <h3 class="h5 mb-3 border-top pt-4 mt-2">Follow</h3>
+        <div class="nav">
+          {% for item in site.data.social_media %}
+            <a class="btn btn-primary-soft fs-sm p-0 icon-sm rounded-circle me-2" href="{{ item.link }}"><i class="bi-{{ item.name }}"></i> </a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+</section>

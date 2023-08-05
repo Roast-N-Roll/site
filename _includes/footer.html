@@ -1,0 +1,68 @@
+<footer class="bg-dark footer">
+  <div class="footer-top py-7 py-md-8 py-lg-10">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-3 pe-xl-5">
+          <div class="pb-3"><img src="assets/Logotype_RoastnRoll_Horizontal_White.png" title="" alt=""></div>
+          <p class="text-white text-opacity-85">
+            With every cup, we aim to inspire your inner wanderlust.
+            Our coffee truck is your gateway to indulge in the moment,
+            to embrace the journey, and to find joy in the simplest pleasures.
+          <div class="nav">
+            {% for item in site.data.social_media %}
+              <a class="btn btn-light-soft fs-xs p-0 icon-xs rounded-circle me-2" href="{{ item.link }}"><i class="bi-{{ item.name }}"></i> </a>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <h5 class="text-white mb-4 h4">Working Hours</h5>
+          <div class="row text-white text-opacity-85">
+            <div class="col-6"><span>Monday</span></div>
+            <div class="col-6"><span>7am - 3pm</span></div>
+            <div class="col-6"><span>Tuesday</span></div>
+            <div class="col-6"><span>7am - 3pm</span></div>
+            <div class="col-6"><span>Wendsday</span></div>
+            <div class="col-6"><span>7am - 3pm</span></div>
+            <div class="col-6"><span>Thursday</span></div>
+            <div class="col-6"><span>7am - 3pm</span></div>
+            <div class="col-6"><span>Friday</span></div>
+            <div class="col-6"><span>7am - 3pm</span></div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <h5 class="text-white mb-4 h4">Location</h5>
+          <address class="text-white text-opacity-85 m-0">
+            <div class="d-flex">
+              <div class="icon bg-primary bg-opacity-20 text-primary rounded-circle"><i class="bi-map"></i></div>
+              <p class="col ps-3">On the road...</p>
+            </div>
+            <div class="d-flex">
+              <div class="icon bg-primary bg-opacity-20 text-primary rounded-circle"><i class="bi-envelope"></i>
+              </div>
+              <p class="col ps-3">{{ site.email }}<br></p>
+            </div>
+          </address>
+        </div>
+        <div class="col-lg-3">
+          <h5 class="text-white mb-3 h4">Newsletter</h5>
+          <form>
+            <div class="d-flex flex-column mb-2"><input type="email" class="form-control mb-2"
+                placeholder="Enter your username"> <button class="btn btn-primary flex-shrink-0" type="submit">Get
+                Started</button></div>
+            <p class="text-white-50 m-0 fs-sm">Never spam...</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr class="opacity-10 m-0">
+  <div class="py-2">
+    <div class="container">
+      <div class="row gy-3 align-items-center">
+        <div class="col-md-12 text-right text-md-end">
+          <p class="text-white text-opacity-85 small m-0">© {{ site.time | date: '%Y' }} {{ site.company }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
