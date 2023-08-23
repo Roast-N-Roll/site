@@ -18896,6 +18896,11 @@ progress {
   margin-top: var(--bs-gutter-y)
 }
 
+.fixed-height-col {
+  height: 380px;
+  overflow: hidden;
+}
+
 .col {
   flex: 1 0 0%
 }

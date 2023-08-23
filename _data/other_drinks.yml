@@ -1,0 +1,11 @@
+column_left:
+  - name: MATCHA LATTE
+    price: $4.35
+  - name: CHAI LATTE
+    price: $4.25
+
+column_right:
+  - name: Rn'R CHOCOLATE
+    price: $3.50
+  - name: SPARKLING WATER
+    price: $2.00
